@@ -1,4 +1,10 @@
 package org.coding;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.function.Consumer;
+
 /*
 Given an integer array, determine whether it can be divided into pairs such that the sum of elements in each pair is divisible by a given positive integer k.
 For Example
@@ -43,5 +49,20 @@ public class CreatingPairsWithDivisibility {
             }
         }
 
+/*
+        List<Integer> inputlist = Arrays.asList(2, 9, 4, 1, 3, 5);
+
+        inputlist.stream()
+                .peek(item -> {
+                    System.out.println("Inside outer peek");
+                    inputlist.stream()
+                            .peek(innerItem -> {
+                                System.out.println("Inside inner peek");
+                                if((item + innerItem) % k ==0)
+                                    System.out.println("{ "+item+","+innerItem+" }");
+                            });
+                });*/
+
     }
 }
+
